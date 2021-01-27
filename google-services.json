@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "979680450571",
+    "firebase_url": "https://joind-8e2e1.firebaseio.com",
+    "project_id": "joind-8e2e1",
+    "storage_bucket": "joind-8e2e1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:979680450571:android:d508a2ca0bfa2a4f2acf0e",
+        "android_client_info": {
+          "package_name": "com.xetaways.joind"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "979680450571-s1f4cdj22frq9iikkebtprotntrkr2ac.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKnSI6eBO9wz-ZHBHPsd9MoAhNkS2HxW8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "979680450571-s1f4cdj22frq9iikkebtprotntrkr2ac.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

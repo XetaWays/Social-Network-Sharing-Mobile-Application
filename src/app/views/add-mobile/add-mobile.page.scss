@@ -1,0 +1,28 @@
+.custom-row{
+    padding-left: 13px !important;
+    padding-right: 13px !important;
+        --padding-start:14px ;
+        background: #F1F1F1 !important;
+        border: 1px solid transparent !important;
+        border-radius: 12px !important;
+}
+
+ion-row.custom-row{
+    ion-input{
+        --padding-start:20px;
+    }
+}
+
+ion-footer{
+    margin-bottom:8%;
+
+    &.footer-md::before {
+        background-image: none;
+    }
+    ion-button{
+        width:100%;
+        padding-left: 13px;
+        padding-right: 13px;
+        height: 46px;
+    }
+}

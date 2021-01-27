@@ -1,0 +1,47 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary" mode="ios" >
+    <ion-buttons slot="start">
+      <ion-back-button size="small"  text="" icon="chevron-back-outline" ></ion-back-button>
+    </ion-buttons>
+    <ion-title>Radar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item class="ion-margin-top" lines="none">
+      <ion-text ><span style="font-size: larger">Offline mode</span></ion-text>
+      <ion-toggle [(ngModel)]="toggleOffline" name="toggleOffline" (click)="offCliked()" color="success" slot="end" ></ion-toggle>
+    </ion-item>
+    
+    <ion-item-divider></ion-item-divider>
+
+
+  </ion-list>
+
+  <div class="ion-margin-top ion-text-center">
+    <img style="width:411px;height:411px; margin-top:20px;"  src="assets/radar.png"/>
+  </div>
+
+  <ion-avatar style="margin:auto; margin-top:16px;position:relative;bottom:408px;left:10px" class="ion-margin-top">
+    <img src="https://image.freepik.com/free-vector/businessman-character-avatar-icon-vector-illustration-design_24877-18271.jpg">
+    <ion-text><span>iPhone</span></ion-text>
+  </ion-avatar>
+
+  <ion-avatar style="margin:auto; margin-top:16px;position:relative;bottom:194px;left:15px" class="ion-margin-top">
+    <img src="https://image.freepik.com/free-vector/businessman-character-avatar-icon-vector-illustration-design_24877-18271.jpg">
+    <ion-text><span >iPhone</span></ion-text>
+  </ion-avatar>
+
+  <ion-avatar style="margin:auto; margin-top:16px;position:relative;bottom:385px;left:135px" class="ion-margin-top">
+    <img src="https://image.freepik.com/free-vector/businessman-character-avatar-icon-vector-illustration-design_24877-18271.jpg">
+    <ion-text><span >iPad</span></ion-text>
+  </ion-avatar>
+
+  <ion-avatar style="margin:auto; margin-top:16px;position:relative;bottom:504px;right:95px" class="ion-margin-top">
+    <img src="https://image.freepik.com/free-vector/businessman-character-avatar-icon-vector-illustration-design_24877-18271.jpg">
+    <ion-text><span >iMac</span></ion-text>
+  </ion-avatar>
+
+</ion-content>

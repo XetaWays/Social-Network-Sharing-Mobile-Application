@@ -1,0 +1,12 @@
+ion-content{
+    --overflow: hidden;
+
+    ion-avatar{
+        text-align: center;
+        ion-text{
+            span{
+                font-size:12px;
+            }
+        }
+    }
+}

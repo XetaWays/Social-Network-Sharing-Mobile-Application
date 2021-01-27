@@ -1,0 +1,62 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+
+ion-button{
+    text-transform: none;
+}
+
+.my-custom-class .alert-message{
+    padding-top: 0;
+    margin: auto;
+    font-size: 12px;
+}
+
+.my-custom-class .alert-title{
+    font-size: large;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+.my-custom-class .alert-button-group{
+    margin-bottom:16px;
+}
+ 
+.my-custom-class .alert-button{
+    margin: auto;
+    background: #2D8EBC;
+    color: white;
+    border-radius: 4px;
+    padding-left: 3.1em;
+    padding-right: 3.1em;
+    width: 40%;
+    text-transform: none;
+}
+
+ion-back-button{
+    --color: white !important;
+  }

@@ -1,0 +1,22 @@
+<ion-tabs #myTabs (ionTabsDidChange)="getSelectedTab()" >
+
+  <ion-tab-bar  slot="bottom">
+    <ion-tab-button tab="radar">
+      <ion-icon name="home"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button tab="scan-code">
+      <ion-icon name="scan"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button tab="share-code">
+      <ion-icon name="share-social"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button ion-long-press [interval]="400" (longPressed)="active()" tab="settings">
+      <ion-icon name="settings-outline"></ion-icon>
+    </ion-tab-button>
+
+  </ion-tab-bar>
+
+</ion-tabs>

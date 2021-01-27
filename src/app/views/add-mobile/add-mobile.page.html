@@ -1,0 +1,25 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary" mode="ios" >
+    <ion-buttons slot="start">
+      <ion-button (click)="closeMobile()" size="small"><ion-icon name="close-outline"></ion-icon></ion-button>
+    </ion-buttons>
+    <ion-title >Add Mobile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-grid class="ion-margin-top">
+  <ion-row class="custom-row">
+    <ion-col style="border-right:2px solid lightgray" size="3" size-sm>
+      <ion-select placeholder="+1">
+        <ion-select-option *ngFor="let countryCode of dialCodes" [value]="countryCode['dial_code']">{{countryCode["dial_code"]}}</ion-select-option>
+      </ion-select>
+    </ion-col>
+    <ion-input type="tel" (keyup.enter)="submit()" (ionBlur)="leavephone()" [(ngModel)]="phone" name="phone" [placeholder]="placeholder" [value]="startPhone" ></ion-input>
+  </ion-row>
+</ion-grid>
+</ion-content>
+
+<ion-footer [hidden]='btnhide'>
+  <ion-button (click)="submit()" expand="block" color="warning">Verify</ion-button>
+</ion-footer>

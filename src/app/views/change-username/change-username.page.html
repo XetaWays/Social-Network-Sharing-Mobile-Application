@@ -1,0 +1,23 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary" mode="ios" >
+    <ion-buttons slot="start">
+      <ion-button (click)="closeUsername()" size="small"><ion-icon name="close-outline"></ion-icon></ion-button>
+    </ion-buttons>
+    <ion-title>Change Username</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list class="ion-margin-top">
+    <ion-item lines="none" >
+      <ion-input (keyup.enter)="submit()" (ionBlur)="leavephone()" [(ngModel)]="unme" name="unme" (ionChange)="checkUsername()" type="text" [value]="username"></ion-input>
+      <ion-icon [name]="checkName" slot="end"></ion-icon>
+    </ion-item>  
+
+  </ion-list>
+</ion-content>
+
+
+<ion-footer [hidden]='btnhide'>
+  <ion-button (click)="submit()" expand="block" color="warning">Confirm</ion-button>
+</ion-footer>

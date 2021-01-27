@@ -1,0 +1,29 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary" mode="ios" >
+    <ion-title >Share Code</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-list>
+  
+    <ion-text style="position: relative; left: 50%; transform: translateX(-50%);"><span style="font-size:larger;">{{Username}}</span></ion-text>
+  <ion-item-divider></ion-item-divider>
+
+  <ion-item lines="none">
+    <ion-button (click)="addQrCode()" class="qr-btn"><ion-icon name="add-outline"></ion-icon>Add QR Code</ion-button>
+  </ion-item>
+  <ion-item-divider></ion-item-divider>
+
+  <ion-item *ngFor="let socialMedia of socialMedias;let i=index;" class="ion-margin-top" lines="none">
+    <ion-img [src]="socialMedia.icon"></ion-img>
+    <ion-text><span style="margin-left:12px;font-size:smaller">{{socialMedia.username}}</span></ion-text>
+    <ion-buttons  slot="end">
+      <ion-button class="custom-btn" *ngIf="!socialMedia.connected" (click)="connectMedia(i)" color="primary"  fill="solid">Connect</ion-button>
+      <ion-button class="custom-btn" *ngIf="socialMedia.connected" (click)="disconnectMedia(i)" color="warning"  fill="solid">Disconnect</ion-button>
+    </ion-buttons>
+  </ion-item>
+
+
+</ion-list>
+</ion-content>

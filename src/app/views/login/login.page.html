@@ -1,0 +1,94 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="ios" >
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="register" size="small" color="dark" text="" icon="chevron-back-outline" ></ion-back-button>
+    </ion-buttons>
+    <ion-title >Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="ion-margin-top ion-text-center" lines="none">
+    <ion-img  src="assets/logo.png"></ion-img>
+  </div>
+  <ion-list>
+    <ion-item class="ion-margin-top" lines="none">
+      <ion-input [(ngModel)]="email" name="email" type="email" placeholder="Email"></ion-input>
+    </ion-item>
+    <ion-item class="ion-margin-top" lines="none">
+      <ion-input (keyup.enter)="login()" [(ngModel)]="password" name="password" [type]="typePwd" placeholder="Password"></ion-input>
+      <ion-icon (click)="switchPwd()" [name]="namePwd" name="eye" slot="end"></ion-icon>
+    </ion-item>
+</ion-list>
+<ion-grid>
+  <ion-row class="ion-margin-top">
+<ion-col size="12" class="ion-no-padding" >
+<ion-button (click)="login()" class="custom-btn" expand="block">Login</ion-button>
+</ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col style="padding-right: 13px;"  class="ion-margin-top  ion-text-end" >
+      <a style="text-decoration:none" routerLink="/forget-password"><ion-text color="warning"> Forgot your password?</ion-text></a>
+    </ion-col>
+  </ion-row>
+  <ion-row class="ion-margin-bottom" style="margin-top:24px;">
+    <ion-col size="4">
+      <ion-item-divider>
+      </ion-item-divider>
+          </ion-col>
+          <ion-col class="login-text" size="4">
+            <ion-text > Or Login with </ion-text>
+                </ion-col>
+                <ion-col size="4">
+                  <ion-item-divider>
+                  </ion-item-divider>
+                      </ion-col>
+  </ion-row>
+</ion-grid>
+<ion-grid>
+  <ion-row class="ion-justify-content-center">
+    <ion-col offset="1">
+        <ion-img src="assets/icons/facebook.png"></ion-img>
+    </ion-col>
+
+    <ion-col>
+      <ion-img src="assets/icons/instagram.png"></ion-img>
+    </ion-col>
+    <ion-col>
+      <ion-img src="assets/icons/ticktock.png"></ion-img>
+    </ion-col>
+    <ion-col>
+      <ion-img src="assets/icons/twitter.png"></ion-img>
+    </ion-col>
+    <ion-col>
+      <ion-img src="assets/icons/youtube.png"></ion-img>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="ion-justify-content-center">
+    <ion-col offset="1">
+        <ion-img src="assets/icons/snapchat.png"></ion-img>
+    </ion-col>
+
+    <ion-col>
+      <ion-img src="assets/icons/spotify.png"></ion-img>
+    </ion-col>
+    <ion-col>
+      <ion-img src="assets/icons/twitch.png"></ion-img>
+    </ion-col>
+    <ion-col>
+      <ion-img src="assets/icons/pinterest.png"></ion-img>
+    </ion-col>
+    <ion-col>
+      <ion-img src="assets/icons/white.png"></ion-img>
+    </ion-col>
+  </ion-row>
+
+
+  <ion-row style="margin-top: 26px;">
+    <ion-col  class="ion-margin-top ion-text-center">
+   <ion-text>Don't have an account?</ion-text> <a style="text-decoration:none" routerLink="/register"><ion-text color="warning"> Register</ion-text></a>
+    </ion-col>
+   </ion-row>
+   
+</ion-grid>
+  </ion-content>

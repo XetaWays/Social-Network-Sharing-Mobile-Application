@@ -1,0 +1,29 @@
+.bg {
+    background-color: white;
+    padding-bottom: 5px;
+}
+ion-content {
+    --ion-background-color: transparent;
+    --overflow: hidden;
+}
+ion-card{
+    --background:#F8F8F8
+}
+
+ion-item{
+    ion-input{
+        border: 1px solid grey;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    }
+    ion-buttons{
+        margin-inline-start:0px;
+        ion-button{
+            width: 106px;
+    margin-left: 0px;
+    height: 42px;
+    --border-radius:0px 8px 8px 0px;
+
+        }
+    }
+}

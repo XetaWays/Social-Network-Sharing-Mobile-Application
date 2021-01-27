@@ -1,0 +1,74 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="ios" >
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="login" size="small" color="dark" text="" icon="chevron-back-outline" ></ion-back-button>
+    </ion-buttons>
+    <ion-title >Register</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="ion-margin-top ion-text-center" lines="none">
+    <ion-img  src="assets/logo.png"></ion-img>
+  </div>
+
+  <ion-list>
+    <ion-item lines="none">
+      <ion-input [(ngModel)]="name" name="name" name="name" placeholder="Full name"></ion-input>
+    </ion-item>
+    <ion-item class="ion-margin-top" lines="none">
+      <ion-input [(ngModel)]="username" name="username" placeholder="Username"></ion-input>
+    </ion-item>
+    <ion-item class="ion-margin-top" lines="none">
+      <ion-input [(ngModel)]="email" name="email" type="email" placeholder="Email"></ion-input>
+    </ion-item>
+    <ion-item class="ion-margin-top" lines="none">
+      <ion-input [(ngModel)]="password" name="password" [type]="typePwd" placeholder="Password"></ion-input>
+      <ion-icon (click)="switchPwd()" [name]="namePwd" slot="end"></ion-icon>
+    </ion-item>
+    <ion-item  class="ion-margin-top" lines="none">
+      <ion-input (keyup.enter)="register()" [(ngModel)]="rpassword" name="rpassword" [type]="typeRPwd" placeholder="Repeat Password"></ion-input>
+      <ion-icon (click)="switchRPwd()" [name]="nameRPwd" slot="end"></ion-icon>
+    </ion-item>    
+  </ion-list>
+
+    <ion-radio-group [(ngModel)]="gender" name="gender" value="gender">
+      <ion-list-header  class="ion-margin-top">
+        <ion-label>Gender</ion-label>
+      </ion-list-header>
+      <ion-grid>
+      <ion-row style="padding-left:12px;">
+        <ion-col>
+          <ion-item lines="none" class="custom-item">
+            <ion-label>Male</ion-label>
+            <ion-radio color="warning" slot="start" value="male"></ion-radio>    
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item  lines="none" class="custom-item">
+            <ion-label>Woman</ion-label>
+            <ion-radio color="warning" slot="start" value="woman"></ion-radio>
+          </ion-item>    
+        </ion-col>
+        <ion-col>
+          <ion-item  lines="none" class="custom-item">
+            <ion-label>Other</ion-label>
+            <ion-radio color="warning" slot="start" value="other"></ion-radio>
+          </ion-item>    
+        </ion-col>
+      </ion-row>
+      </ion-grid>
+    </ion-radio-group>
+
+    <ion-grid>
+    <ion-row style="margin-top:4px;">
+<ion-col class="ion-no-padding" size="12">
+<ion-button (click)="register()" class="custom-btn" expand="block">Register</ion-button>
+</ion-col>
+    </ion-row>
+    <ion-row>
+ <ion-col class="ion-margin-top ion-text-center">
+<ion-text>Have an account?</ion-text> <a style="text-decoration:none" routerLink="/login"><ion-text color="warning"> Login</ion-text></a>
+ </ion-col>
+</ion-row>
+</ion-grid>
+</ion-content>

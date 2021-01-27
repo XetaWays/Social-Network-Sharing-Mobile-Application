@@ -1,0 +1,37 @@
+.custom-row{
+    padding-left: 13px !important;
+    padding-right: 13px !important;
+        --padding-start:14px ;
+        background: #F1F1F1 !important;
+        border: 1px solid transparent !important;
+}
+
+.custom-item{
+    --border-radius:12px;
+        --ion-background-color:#F1F1F1 !important;
+        padding-left: 13px !important;
+        padding-right: 13px !important;
+    
+}
+
+ion-item-divider{
+    margin-left: 16px;
+    min-height: 26px;
+    width: 92%;
+}
+
+ion-list{
+    ion-item{
+        ion-text{
+            font-size:larger;
+        }
+    }
+}
+
+ion-icon{
+    color:darkgray;
+}
+
+sub{
+    color:#ACACAC;
+}

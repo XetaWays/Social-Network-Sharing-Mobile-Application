@@ -1,0 +1,37 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary" mode="ios">
+    <ion-title >Scan Code</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar
+  (ionInput)="search($event)"
+></ion-searchbar>
+
+<ion-list lines="none">
+  <ion-item *ngFor="let foodItem of foodList">
+    <ion-avatar style="margin:auto; margin-top:16px" class="ion-margin-top" (click)="chagePP()">
+      <ion-img [src]="searched.img"></ion-img>
+   </ion-avatar>
+    <ion-label class="ion-text-wrap">
+      <ion-text color="primary">
+        <h3>{{ searched.uname }}</h3>
+      </ion-text>
+    </ion-label>
+  </ion-item>
+</ion-list>
+
+<div *ngIf="!socialMediaBoxVisible && !scanHidden">
+  <img style="margin-left:15%;width:70%;" src="assets/focus.png"> 
+  
+  <div style="position: absolute; bottom:0; left:25%; margin-bottom:10px;">
+    <img style="margin-bottom:5px; margin-right:10px; height:40px;" src="assets/gallery.png" (click)="openGallery()">
+    <img src="assets/shutter.png" style="height:75px;">
+    <img style="margin-bottom:5px; margin-left:7px; height:48px;" src="assets/rotate.png" (click)="invertScan()">
+  </div>
+
+</div>
+
+
+</ion-content>

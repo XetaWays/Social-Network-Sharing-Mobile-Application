@@ -1,0 +1,151 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary" mode="ios" >
+    <ion-buttons slot="start">
+      <ion-back-button size="small"  text="" icon="chevron-back-outline" defaultHref="tabs/share-code"></ion-back-button>
+    </ion-buttons>
+    <ion-title>QrCodeGenerator</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-item lines="none">
+  <ion-text><span style="font-weight: bold;">QrCode</span></ion-text>
+</ion-item>
+
+<div class="ion-margin-top ion-text-center" lines="none">
+  <img style="height:120px;"  src="assets/qrcode.png"/>
+</div>
+
+
+<ion-item >
+  <ion-text color="warning"><span>Body shape</span></ion-text>
+</ion-item>
+<ion-grid>
+  <ion-row>
+    <ion-col size="2" *ngFor="let bodyShape of bodyShapes;let i=index">
+      <img [ngClass]="{'selected-img':i===selectedBodyShapeIndex}" (click)="selectBodyShape(i)" [src]="bodyShape.imageUrl">
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<ion-item >
+  <ion-text color="warning"><span>Eye frame shape</span></ion-text>
+</ion-item>
+<ion-grid>
+  <ion-row>
+    <ion-col size="2" *ngFor="let eyeFrameShape of eyeFrames;let i=index">
+      <img [ngClass]="{'selected-img':i===selectedEyeFrameIndex}" (click)="selectEyeFrameShape(i)" [src]="eyeFrameShape.imageUrl">
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<ion-item >
+  <ion-text color="warning"><span>Eye Ball shape</span></ion-text>
+</ion-item>
+<ion-grid>
+  <ion-row>
+    <ion-col size="2" *ngFor="let eyeBallShape of eyeBalls;let i=index">
+      <img [ngClass]="{'selected-img':i===selectedEyeBallIndex}" (click)="selectEyeBallShape(i)" [src]="eyeBallShape.imageUrl">
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<ion-list>
+  <ion-item lines="none">
+   <ion-text><span style="font-weight:bold;">Colors</span></ion-text> 
+    </ion-item>
+    <ion-item >
+      <ion-text color="warning"><span>Foreground color</span></ion-text>
+    </ion-item>
+
+    <ion-radio-group [(ngModel)]="foregroundColorOption">
+
+  
+      <ion-item lines="none">
+        <ion-label>Single color</ion-label>
+        <ion-radio mode="md" slot="start" value="single color"></ion-radio>
+      </ion-item>
+  
+      <ion-item lines="none">
+        <ion-label>Color gradient</ion-label>
+        <ion-radio mode="md" slot="start" value="color gradient"></ion-radio>
+      </ion-item>
+  
+    </ion-radio-group>
+   
+    <ion-item lines="none">
+      <ion-label>Custom eye color</ion-label>
+      <ion-checkbox mode="md" slot="start" [(ngModel)]="customEyeColorChecked"></ion-checkbox>
+    </ion-item>
+  
+</ion-list>
+<ion-row>
+  <ion-col size="12">
+    <ion-item  lines="none">
+      <input [(ngModel)]="color" type="color"/>  
+      <ion-text><span>{{color}}</span></ion-text>
+    </ion-item>    
+  </ion-col>
+  <ion-col *ngIf="foregroundColorOption=='color gradient'" size="12">
+    <ion-item  lines="none">
+      <input 
+      [(ngModel)]="secondaryColor" type="color"/>  
+      <ion-text><span >{{secondaryColor}}</span></ion-text>
+    </ion-item>
+    
+  </ion-col>
+  <ion-col *ngIf="foregroundColorOption=='color gradient'" size="12">
+    <ion-item >
+      <ion-select style="min-width:100%" placeholder="Radial gradiant">
+        <ion-select-option></ion-select-option>
+      </ion-select>
+    </ion-item>
+    
+  </ion-col>
+</ion-row>
+
+<ion-item *ngIf="customEyeColorChecked" lines="none" class="ion-margin-top">
+  <ion-text><span style="font-weight:bold;">Eye Color</span></ion-text> 
+
+</ion-item>
+
+<ion-row *ngIf="customEyeColorChecked">
+  <ion-col size="12">
+    <ion-item  lines="none">
+      <input 
+      [(ngModel)]="eyeColor" type="color"/>  
+      <ion-text><span style="font-size:smaller;margin-left:8px;">{{eyeColor}}</span></ion-text>
+    </ion-item>    
+  </ion-col>
+  <ion-col  size="12">
+    <ion-item  lines="none">
+      <input 
+      [(ngModel)]="secondaryEyeColor" type="color"/>  
+      <ion-text><span >{{secondaryEyeColor}}</span></ion-text>
+    </ion-item>
+  </ion-col>
+</ion-row>
+
+<ion-item class="ion-margin-top">
+  <ion-text color="warning"><span>Background Color</span></ion-text>
+</ion-item>
+
+<ion-row class="ion-margin-top">
+  <ion-col size="12">
+    <ion-item lines="none">
+      <input 
+      [(ngModel)]="backgroundColor" type="color"/>  
+      <ion-text><span>{{backgroundColor}}</span></ion-text>
+    </ion-item>    
+  </ion-col>
+</ion-row>
+
+</ion-content>
+
+<ion-footer>
+  <ion-buttons>
+    <ion-button (click)="shareCode()" color="warning" fill="solid">Share the link</ion-button>
+    <ion-button (click)="shareQRCode()" color="warning" fill="solid">Share a QR code</ion-button>
+  </ion-buttons>
+</ion-footer>

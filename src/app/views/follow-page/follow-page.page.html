@@ -1,0 +1,32 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary" mode="ios" >
+    <ion-buttons slot="start">
+      <ion-back-button size="small"  text="" icon="chevron-back-outline" defaultHref="tabs"></ion-back-button>
+    </ion-buttons>
+    <ion-title >Follow Page</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+     <ion-avatar style="margin:auto; margin-top:16px; width:70px;height:70px;" class="ion-margin-top">
+        <img [src]="sourcePP">
+      </ion-avatar>
+  
+
+  <div style="margin-top: 8px;font-weight: bold;" class="ion-text-center">
+    <h5>{{Username}}</h5>
+  </div>
+
+  <ion-item-divider></ion-item-divider>
+
+  <div *ngFor="let socialMedia of socialMedias;let i=index;">
+    <ion-item lines="none" [hidden]="!socialMedia.show">
+        <ion-img [src]="socialMedia.icon"></ion-img>
+        <ion-text><span style="margin-left:12px;font-size:smaller">{{socialMedia.username}}</span></ion-text>
+        <ion-buttons  slot="end">
+          <ion-button color="primary" (click)="Join(i)" fill="solid">Join</ion-button>
+        </ion-buttons>
+    </ion-item>
+  </div>
+
+</ion-content>

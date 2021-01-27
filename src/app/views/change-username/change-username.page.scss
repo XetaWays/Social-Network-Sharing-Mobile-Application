@@ -1,0 +1,28 @@
+ion-content{
+    ion-list{
+        ion-item{
+            padding-left: 13px;
+              padding-right: 13px;
+                  --padding-start:14px;
+                  --background: #F1F1F1;
+                  border: 1px solid transparent;
+                  --border-radius: 12px;
+              
+          }
+
+    }
+
+}
+
+ion-footer{
+    margin-bottom:8%;
+    &.footer-md::before {
+        background-image: none;
+    }
+    ion-button{
+        width:100%;
+        padding-left: 13px;
+        padding-right: 13px;
+        height: 46px;
+    }
+}

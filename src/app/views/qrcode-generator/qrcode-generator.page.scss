@@ -1,0 +1,45 @@
+.selected-img{
+    border:1px solid blue !important;
+    border-radius:6px;
+}
+
+ion-col{
+    img{
+        width:50.86px;
+        height: 50.86px;
+        border:1px solid lightgrey;
+    }
+}
+
+ion-footer{
+    margin-bottom:2%;
+    margin-top:2%;
+    margin-left:2%;
+    &.footer-md::before {
+        background-image: none;
+    }
+    ion-button{
+        margin-left:16px;
+        width:40%;
+        height: 40px;
+    }
+}
+
+ion-row{
+    ion-col{
+        ion-item{
+            border-radius:6px; 
+            border:1px solid lightgray;
+            input{
+                width:30%;
+                border-radius:6px;
+            }
+            ion-text{
+                span{
+                    font-size:smaller;
+                    margin-left:8px;
+                }
+            }
+        }
+    }
+}

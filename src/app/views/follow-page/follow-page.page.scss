@@ -1,0 +1,13 @@
+ion-list{
+    ion-item{
+        height: 68px;
+        ion-buttons{
+            ion-button{
+                --border-radius:8px;
+                width:101px;
+                font-size:small;
+            }
+        }
+    }
+}
+
